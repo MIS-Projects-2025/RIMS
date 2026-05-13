@@ -86,8 +86,8 @@ const HardwareModal = ({ open, onClose, searchValue, onSave, item }) => {
             serial: "",
             model: "",
             brand: "",
-            processor: "",
-            motherboard: "",
+            // processor: "",
+            // motherboard: "",
             ip_address: "",
             wifi_mac: "",
             lan_mac: "",
@@ -644,14 +644,14 @@ const HardwareModal = ({ open, onClose, searchValue, onSave, item }) => {
                                             { label: "Model", name: "model" },
                                             { label: "Brand", name: "brand" },
                                             { label: "Serial", name: "serial" },
-                                            {
-                                                label: "Processor",
-                                                name: "processor",
-                                            },
-                                            {
-                                                label: "Motherboard",
-                                                name: "motherboard",
-                                            },
+                                            // {
+                                            //     label: "Processor",
+                                            //     name: "processor",
+                                            // },
+                                            // {
+                                            //     label: "Motherboard",
+                                            //     name: "motherboard",
+                                            // },
                                             {
                                                 label: "IP Address",
                                                 name: "ip_address",

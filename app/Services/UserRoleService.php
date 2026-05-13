@@ -46,7 +46,11 @@ class UserRoleService
 
         return $roles;
     }
-
+    public function getCanRequest(string $userId): bool
+    {
+     
+        return $this->userRepository->getCanRequest($userId);
+    }
     public function getEmployees(): array
     {
         return $this->userRepository->getEmployees();

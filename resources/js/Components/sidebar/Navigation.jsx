@@ -1,11 +1,12 @@
 import { usePage } from "@inertiajs/react";
 import SidebarLink from "@/Components/sidebar/SidebarLink";
 
-import { ClipboardList, FileText, Table2, Box, Layers } from "lucide-react";
+import { ClipboardList, FileText, Table2, Box } from "lucide-react";
 import Dropdown from "./DropDown";
 
 export default function NavLinks({ isSidebarOpen }) {
     const { emp_data } = usePage().props;
+    console.log(emp_data);
 
     // Define all request links
     let requestLinks = [
@@ -13,6 +14,7 @@ export default function NavLinks({ isSidebarOpen }) {
             href: route("request.form"),
             label: "Requests Slip",
             icon: <FileText className="text-base" />,
+            requiresCanRequest: true, // Only visible if employee can request
         },
         {
             href: route("requestType.form"),
@@ -27,12 +29,20 @@ export default function NavLinks({ isSidebarOpen }) {
         },
     ];
 
-    // Filter based on user roles
+    // Filter links based on roles and can_request
     requestLinks = requestLinks.filter((link) => {
-        if (!link.roles) return true; // no role restriction
-        return link.roles.some((role) =>
-            emp_data.emp_user_roles.includes(role),
-        );
+        // Role check
+        if (
+            link.roles &&
+            !link.roles.some((role) => emp_data.emp_user_roles.includes(role))
+        ) {
+            return false;
+        }
+        // Can request check
+        if (link.requiresCanRequest && !emp_data.can_request) {
+            return false;
+        }
+        return true;
     });
 
     const issuanceLinks = [

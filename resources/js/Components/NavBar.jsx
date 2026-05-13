@@ -41,7 +41,7 @@ export default function NavBar() {
     const isDark = theme === "dark";
 
     return (
-        <nav className="sticky top-0 z-50 bg-background/70 backdrop-blur-md border-b border-border/40 shadow-sm">
+        <nav className="sticky top-0 z-50 bg-background/70 backdrop-blur-md h-14 border-b border-border/40 shadow-sm">
             <div className="px-4 sm:px-6 lg:px-8">
                 <div className="flex items-center justify-end h-[54px] gap-2">
                     {/* ── Theme Toggle Pill ── */}

@@ -59,8 +59,18 @@ class UserRepository
             return false;
         }
     }
-
-
+    public function getCanRequest(string $userId): bool
+        {
+            try {
+            return Masterlist::where('EMPLOYID', $userId)
+                ->where('ACCSTATUS', 1)
+                ->where('EMPPOSITION', '>=', 2)
+                ->exists();
+        } catch (\Exception $e) {
+            Log::error('Error checking MIS Employee: ' . $e->getMessage());
+            return false;
+        }
+        }
     public function findUserById(string $empId): ?object
     {
         return Masterlist::where('EMPLOYID', $empId)
@@ -92,6 +102,7 @@ class UserRepository
             ->get()
             ->toArray();
     }
+   
     public function getStaffList(string $empId)
     {
         return Masterlist::where(function ($q) use ($empId) {
