@@ -8,10 +8,10 @@ import {
     TableHead,
     TableHeader,
     TableRow,
-} from "@/components/ui/table";
-import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Input } from "@/components/ui/input";
+} from "@/Components/ui/table";
+import { Button } from "@/Components/ui/button";
+import { Card, CardContent, CardHeader, CardTitle } from "@/Components/ui/card";
+import { Input } from "@/Components/ui/input";
 import { Eye, Loader2, Search } from "lucide-react";
 import StatCard from "@/Components/StatCard";
 import useRequestTable from "@/Hooks/useRequestTable";

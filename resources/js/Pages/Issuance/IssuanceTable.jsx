@@ -5,9 +5,9 @@ import { useDrawer } from "@/Hooks/useDrawer";
 import { useApiTableConfig } from "@/Hooks/useApiTableConfig";
 import { usePage } from "@inertiajs/react";
 import SkeletonTable from "@/Components/skeleton/SkeletonTable";
-import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
+import { Card, CardHeader, CardTitle, CardContent } from "@/Components/ui/card";
+import { Badge } from "@/Components/ui/badge";
+import { Button } from "@/Components/ui/button";
 import { Eye, ThumbsUp } from "lucide-react";
 import dayjs from "dayjs";
 import axios from "axios";
@@ -20,7 +20,7 @@ import {
     TableHead,
     TableHeader,
     TableRow,
-} from "@/components/ui/table";
+} from "@/Components/ui/table";
 
 export default function IssuanceTable() {
     const { drawerOpen, selectedItem, openDrawer, closeDrawer } = useDrawer();

@@ -2,17 +2,17 @@ import React, { useEffect } from "react";
 import { useForm, useFieldArray } from "react-hook-form";
 import { Trash2 } from "lucide-react";
 
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-import { Separator } from "@/components/ui/separator";
+import { Button } from "@/Components/ui/button";
+import { Input } from "@/Components/ui/input";
+import { Textarea } from "@/Components/ui/textarea";
+import { Separator } from "@/Components/ui/separator";
 import {
     Sheet,
     SheetContent,
     SheetHeader,
     SheetTitle,
     SheetFooter,
-} from "@/components/ui/sheet";
+} from "@/Components/ui/sheet";
 import {
     Form,
     FormControl,
@@ -20,7 +20,7 @@ import {
     FormItem,
     FormLabel,
     FormMessage,
-} from "@/components/ui/form";
+} from "@/Components/ui/form";
 import {
     Table,
     TableBody,
@@ -28,8 +28,8 @@ import {
     TableHead,
     TableHeader,
     TableRow,
-} from "@/components/ui/table";
-import { Combobox } from "@/components/ui/combobox";
+} from "@/Components/ui/table";
+import { Combobox } from "@/Components/ui/combobox";
 
 const BulkRequestDrawer = ({
     open,

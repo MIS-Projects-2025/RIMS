@@ -10,7 +10,7 @@ import Cart from "@/Components/request/Cart";
 import Summary from "@/Components/request/Summary";
 import RequestDrawer from "@/Components/request/RequestDrawer";
 import BulkRequestDrawer from "@/Components/request/BulkRequestDrawer";
-import { ToggleGroup, ToggleGroupItem } from "@/components/ui/toggle-group";
+import { ToggleGroup, ToggleGroupItem } from "@/Components/ui/toggle-group";
 
 const Form = () => {
     const { emp_data } = usePage().props;

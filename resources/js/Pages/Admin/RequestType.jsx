@@ -7,11 +7,11 @@ import {
     TableBody,
     TableRow,
     TableCell,
-} from "@/components/ui/table";
-import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
-import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
-import { Input } from "@/components/ui/input";
+} from "@/Components/ui/table";
+import { Button } from "@/Components/ui/button";
+import { Badge } from "@/Components/ui/badge";
+import { Card, CardHeader, CardTitle, CardContent } from "@/Components/ui/card";
+import { Input } from "@/Components/ui/input";
 import {
     AlertDialog,
     AlertDialogAction,
@@ -21,7 +21,7 @@ import {
     AlertDialogFooter,
     AlertDialogHeader,
     AlertDialogTitle,
-} from "@/components/ui/alert-dialog";
+} from "@/Components/ui/alert-dialog";
 import { toast } from "sonner";
 import { Delete, Plus, Check, X, Search } from "lucide-react";
 import RequestTypeDrawer from "@/Components/requestType/RequestTypeDrawer";
